@@ -1,26 +1,23 @@
-#root {
-  margin: 0 auto;
-  text-align: center;
-  background-color: #fff;
-}
 
 .app{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Josefin sans', sans-serif;
+  font-family: 'Varela Round', serif;
   margin: 0 auto;
-  max-width: 100%;
+  
 
   .wrapper{
-    max-width: 750px;
+    max-width: 780px;
     margin-top: 1rem;
-    padding: 1.25rem 8rem;
-    background: linear-gradient(to bottom right, #1c64a1, #0b8fa6);
+    padding: 0 4rem;
+    background-image: linear-gradient(to bottom right, #1c64a1, #0b8fa6);
+    border-radius: 5px;
     height: fit-content;
     box-shadow: (
                 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.1), 
                 0 4px 5px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.04)
                 );
   }
+
 }
