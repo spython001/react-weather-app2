@@ -1,3 +1,32 @@
-div{
-    
+.temp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img{
+        display: flex;
+        align-self: center;
+    }
+
+    .celsius{
+        font-size: 3rem;
+        color: white;
+        letter-spacing: 2px;
+        padding: 0 5px;
+    }
+
+    .city{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+
+        .time{
+            font-size: 0.9rem;
+            margin-top: 3px;
+        }
+    }
 }

@@ -5,8 +5,9 @@ export default function Navbar() {
     <div>
         
             <input type="text" placeholder="Search" className='content'/>
-            <span><i className="icon content fa-solid fa-magnifying-glass"></i></span>
-        
+            <span className='iconSpan'>
+                <i className="icon content fa-solid fa-magnifying-glass"></i>
+            </span>
 
     </div> 
   )
