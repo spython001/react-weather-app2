@@ -1,0 +1,49 @@
+.weatherCond{
+    display: flex;
+    gap: 6rem;
+    margin-top: 10px;
+    padding: 5px;
+
+    .humid{
+        display: flex;
+        color: #fff;
+
+        .humidIcon{
+            font-size: 1.5rem;
+        }
+
+        .content1{
+            margin: 0px 5px;
+            display: flex;
+            flex-direction: column;
+
+            .humidPercent{
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .wind{
+        display: flex;
+        color: #fff;
+        
+
+        .windIcon{
+            font-size: 1.5rem;
+        }
+
+        .content2{
+            margin: 0px 5px;
+            display: flex;
+            flex-direction: column;
+
+            .windKm{
+                font-size: 1.5rem;
+            }
+
+            .name{
+                text-align: center;
+            }
+        }
+    }
+}

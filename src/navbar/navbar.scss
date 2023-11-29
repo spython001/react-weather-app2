@@ -33,11 +33,17 @@ div{
         display: flex;
         justify-content: center;
         border-radius: 50%;
+        cursor: pointer;
 
         .icon{
             display: flex;
             align-self: center;
             font-size: 1rem;
+            transition: transform 0.3s ease-out;
+            
+            &:hover{
+                transform: scale(1.25);
+            }
         }
     }
 }
