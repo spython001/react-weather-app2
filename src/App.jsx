@@ -10,7 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [query, setQuery] = useState({q: 'lagos'});
   const [weather, setWeather] = useState(null);
-  const [units, setUnits] = useState('metric')
+  const [units, setUnits] = useState('metric');
+  const [threshold, setThreshold] = useState(units === 'metric' ? 20 : 60);
 
   useEffect (() => {
     const fetchWeather = async () => {
@@ -26,21 +27,9 @@ function App() {
   }, [query, units]);
 
   
-  const formatBackground = () => {
-    if (!weather) {
-      return 'linear-gradient(to bottom right, teal, #0b8fa6);';
-    }
-  
-    const threshold = units === 'metric' ? 20 : 60;
-    if (weather.temp <= threshold) {
-      return 'linear-gradient(to bottom right, teal, #0b8fa6);';
-    }
-    return 'linear-gradient(to right, #d97706, #dd6b20)';
-  };
-  
   return (
     <div className='app'>
-      <div className={ `wrapper ? wrapper : ${formatBackground()}` }>
+      <div className={`wrapper ${weather && weather.temp <= threshold ? 'wrapper' : 'warm'}`}>
         <Navbar setQuery={ setQuery } />
 
         { weather &&
