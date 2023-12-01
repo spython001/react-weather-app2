@@ -9,6 +9,7 @@ export default function Navbar( { setQuery }) {
     if (city !== '') setQuery({ q:city })
   }
 
+  //FOR ENTER KEY
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') handleSearchClick();
   }
