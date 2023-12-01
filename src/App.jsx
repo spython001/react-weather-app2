@@ -23,7 +23,7 @@ function App() {
   return (
     <div className='app'>
       <div className='wrapper'>
-        <Navbar setQuery={ setQuery } units={ units } setUnits={ setUnits }/>
+        <Navbar setQuery={ setQuery } />
 
         { weather &&
         <>

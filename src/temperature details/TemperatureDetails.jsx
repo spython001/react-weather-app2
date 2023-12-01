@@ -2,14 +2,14 @@
 import './temperatureDetails.scss'
 import { iconUrlFromCode, formatToLocalTime } from '../api/weatherApi'
 
-export default function TemperatureDetails({ weather: { icon, dt, temp, name }}) {
+export default function TemperatureDetails({ weather: { icon, dt, temp, name, country }}) {
   return (
     <div className='temp'>
         <img src={iconUrlFromCode(icon)} alt="weather imgs" />
 
         <span className='celsius'>{`${(temp).toFixed()}`}°c</span>
         <span className='city'>
-            <span>{ `${ name }`}</span>
+            <span>{ `${ name }, ${ country }`}</span>
             <span className='time'>{formatToLocalTime(dt)}</span>
         </span>
     </div>
