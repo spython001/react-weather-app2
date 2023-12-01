@@ -1,14 +1,16 @@
+/* eslint-disable react/prop-types */
 import './temperatureDetails.scss'
+import { iconUrlFromCode, formatToLocalTime } from '../api/weatherApi'
 
-export default function TemperatureDetails() {
+export default function TemperatureDetails({ weather: { icon, dt, temp, name }}) {
   return (
     <div className='temp'>
-        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="weather imgs" />
+        <img src={iconUrlFromCode(icon)} alt="weather imgs" />
 
-        <span className='celsius'>24°c</span>
+        <span className='celsius'>{`${(temp).toFixed()}`}°c</span>
         <span className='city'>
-            <span>London</span>
-            <span className='time'>11:45AM</span>
+            <span>{ `${ name }`}</span>
+            <span className='time'>{formatToLocalTime(dt)}</span>
         </span>
     </div>
   )

@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import './weatherConditions.scss'
 
-export default function WeatherConditions() {
+export default function WeatherConditions({ weather: { humidity, speed}}) {
   return (
     <div className='weatherCond'>
         
@@ -9,7 +10,7 @@ export default function WeatherConditions() {
           <i className="humidIcon fa-solid fa-water"></i>
         
           <p className='content1'>
-            <span className='humidPercent'>64%</span>
+            <span className='humidPercent'>{ `${ humidity.toFixed() }%` }</span>
             <span className="name">Humidity</span>
           </p>
         
@@ -20,7 +21,7 @@ export default function WeatherConditions() {
           <i className="windIcon fa-solid fa-wind"></i>
         
           <p className='content2'>
-            <span className='windKm'>18 km/h</span>
+            <span className='windKm'>{ `${ speed.toFixed() } km/h` }</span>
             <span className="name">Wind Speed</span>
           </p>
         
